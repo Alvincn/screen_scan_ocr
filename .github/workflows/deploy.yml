@@ -3,7 +3,7 @@ name: Deploy to Huawei Cloud
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   deploy:
