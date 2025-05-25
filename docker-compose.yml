@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  screen_scan_ocr:
+    build: .
+    container_name: screen_scan_ocr
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - NUXT_HOST=0.0.0.0
+      - NUXT_PORT=3000
+      - OCR_KEY=${OCR_KEY}
+      - EMAIL_PASS=${EMAIL_PASS}
+    restart: unless-stopped
+    volumes:
+      # 如果需要持久化存储，可以添加卷映射
+      # - ./data:/app/data
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
