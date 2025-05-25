@@ -1,75 +1,22 @@
-# Nuxt Minimal Starter
+# 屏幕检测助手
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## 技术栈
+- nuxt3
+- tailwindcss
+- piniaPluginPersistedstate pinia 持久化
+- pinia 仓库
+- nodemailer 邮件发送
+- tesseract.js ocr 图片转文字
 
-## Setup
 
-Make sure to install dependencies:
+## 操作指南：
+1. 在设置中设置关键词（需要匹配的词，多词使用“|”分割）
+2. 在设置中设置排除词（不希望出现的词，排除干扰项，多词使用“|”分割）
+3. 在设置中设置截屏时间（多久检测一次，单位 ms，1s = 1000ms）
+4. 在设置中设置邮箱（匹配后将会通过邮箱发送通知）
+5. 点击开始录屏，选择窗口/桌面，建议将窗口放大，提高 ocr 识别时间以及准确率
+6. 停止录制将会停止录制屏幕
 
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## 其他：
+1. 截屏内容仅用于 ocr 识别，我们不会保存您的截屏
+2. 所有日志、设置均保存在本地存储，我们不会保存您的内容
