@@ -13,9 +13,9 @@ services:
       - OCR_KEY=${OCR_KEY}
       - EMAIL_PASS=${EMAIL_PASS}
     restart: unless-stopped
-    volumes:
-      # 如果需要持久化存储，可以添加卷映射
-      # - ./data:/app/data
+    # volumes:
+    #   # 如果需要持久化存储，可以添加卷映射
+    #   - ./data:/app/data
     networks:
       - app-network
 
